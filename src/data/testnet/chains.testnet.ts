@@ -42,6 +42,14 @@ const TESTNET_CHAINS: { [chainId: number]: ChainData } = {
     imgUrl: "https://docs.gnosischain.com/img/tokens/chiado-xdai.png",
     funnelAddress: "0x9f65d8E5c6947a4D6B11B3059e174C48F9b8c516",
   },
+  [TESTNET_CHAINID.Aurora]: {
+    id: TESTNET_CHAINID.Aurora,
+    name: "Aurora",
+    symbol: "ETH",
+    rpcUrl: "https://testnet.aurora.dev",
+    imgUrl: "/icons/chain/aurora.png",
+    funnelAddress: "0x9f65d8E5c6947a4D6B11B3059e174C48F9b8c516",
+  },
 };
 
 export default TESTNET_CHAINS;

@@ -6,6 +6,7 @@ import { UniswapV2PartitionTask } from "../tasks/invest/UniswapV2PartitionTask";
 import { ApproveTask } from "../tasks/ApproveTask";
 import { Chain } from "modules/Chain";
 import { UniswapV2RebalanceTask } from "../tasks/invest/UniswapV2RebalanceTask";
+import { UniswapV2DecomposeTask } from "../tasks/invest/UniswapV2DecomposeTask";
 
 export const investTasks = (
   fromTokens: Token[],
@@ -21,13 +22,16 @@ export const investTasks = (
   if (resultTokens.length === 1) {
     const resultToken = resultTokens[0];
     // approve resultToken
-    tasks.push(new ApproveTask(resultToken, chain.funnelAddress, `${chain.name} Funnel`));
+    tasks.push(
+      new ApproveTask(resultToken, chain.funnelAddress, `${chain.name} Funnel`)
+    );
 
     if (resultToken.id === dstToken0.id || resultToken.id === dstToken1.id) {
       // partition
       tasks.push(new UniswapV2PartitionTask(resultToken, pair, to));
     } else {
       // Decompose
+      tasks.push(new UniswapV2DecomposeTask(resultToken.address, pair, to));
     }
 
     return tasks;
@@ -51,10 +55,22 @@ export const investTasks = (
 
       // rebalance
       if (!dstToken0.isNativeToken()) {
-        tasks.push(new ApproveTask(dstToken0, chain.funnelAddress, `${chain.name} Funnel`));
+        tasks.push(
+          new ApproveTask(
+            dstToken0,
+            chain.funnelAddress,
+            `${chain.name} Funnel`
+          )
+        );
       }
       if (!dstToken1.isNativeToken()) {
-        tasks.push(new ApproveTask(dstToken1, chain.funnelAddress, `${chain.name} Funnel`));
+        tasks.push(
+          new ApproveTask(
+            dstToken1,
+            chain.funnelAddress,
+            `${chain.name} Funnel`
+          )
+        );
       }
       const rebalanceTasks = new UniswapV2RebalanceTask(
         dstToken0.address,
@@ -74,6 +90,8 @@ export const investTasks = (
         tasks.push(...gatherTasks);
       }
       // decompose notDstTokens[0]
+      tasks.push(new UniswapV2DecomposeTask(notDstTokens[0].address, pair, to));
+
     }
 
     return tasks;

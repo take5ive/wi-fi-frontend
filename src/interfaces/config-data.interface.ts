@@ -28,7 +28,7 @@ export interface TokenData {
   imgUrl?: string;
 }
 
-export type ProtocolType = "UniswapV2" | "ConnextBridge";
+export type ProtocolType = "UniswapV2" | "ConnextBridge" | "WiFiBridge";
 export type ProtocolUsage = "swap" | "bridge";
 
 export interface UniswapV2Data {
@@ -55,6 +55,10 @@ export interface ConnextBridgeData extends BridgeDataBase {
   feeBps: number;
 }
 
+export interface WiFiBridgeData extends BridgeDataBase {
+  feeBps: number;
+}
+
 export interface ProtocolData<T extends ProtocolType = any> {
   usage: ProtocolUsage;
   type: ProtocolType;
@@ -64,5 +68,7 @@ export interface ProtocolData<T extends ProtocolType = any> {
     ? UniswapV2Data
     : T extends "ConnextBridge"
     ? ConnextBridgeData
+    : T extends "WiFiBridge"
+    ? WiFiBridgeData
     : any;
 }

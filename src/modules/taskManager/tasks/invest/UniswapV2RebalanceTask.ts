@@ -75,14 +75,6 @@ export class UniswapV2RebalanceTask extends TaskBase<UniswapV2RebalanceTaskData>
     });
     const beforeLp = await lpToken.getContract().balanceOf(data.to);
 
-    const baseReserve = await baseToken
-      .getContract()
-      .balanceOf(lpToken.address);
-    const farmReserve = await farmToken
-      .getContract()
-      .balanceOf(lpToken.address);
-    console.log(baseReserve.toString(), farmReserve.toString());
-
     let value = ethers.constants.Zero;
     if (baseToken.isNativeToken()) {
       value = baseToken.parse(amountInBase);
@@ -90,11 +82,6 @@ export class UniswapV2RebalanceTask extends TaskBase<UniswapV2RebalanceTaskData>
     if (farmToken.isNativeToken()) {
       value = farmToken.parse(amountInFarm);
     }
-
-    console.log(
-      "FEE",
-      await funnel.feeOf("0x9D734898bfDC6939655D05d6a2923f7efC075606")
-    );
 
     const tx = await funnel.rebalanceAndAddLiquidity(
       lpToken.address,

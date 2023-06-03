@@ -19,7 +19,7 @@ export const WalletConnectButton = ({
       className={cn("btn-left-icon btn-primary-o", className)}
     >
       <ChainIcon chain={chain} size="sm" />
-      <p className="text-sm code ml-1.5 mb-1">{ellipsisAddress(account)}</p>
+      <p className="code ml-1.5 mb-1">{ellipsisAddress(account)}</p>
     </button>
   ) : (
     <button onClick={connect} className={cn("btn btn-primary", className)}>

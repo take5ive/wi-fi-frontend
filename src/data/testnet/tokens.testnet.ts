@@ -1,4 +1,4 @@
-import { ethers } from "ethers";
+import { constants } from "ethers";
 import TESTNET_CHAINID from "./chainIds.testnet";
 import { TokenData } from "interfaces/config-data.interface";
 
@@ -50,7 +50,7 @@ const TESTNET_TOKENS: TokenData[] = [
     name: "ETH",
     decimals: 18,
     symbol: "ETH",
-    address: ethers.constants.AddressZero,
+    address: constants.AddressZero,
     imgUrl:
       "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/goerli/coin/coinImage.png",
   },
@@ -85,7 +85,7 @@ const TESTNET_TOKENS: TokenData[] = [
     name: "Polygon Matic",
     decimals: 18,
     symbol: "MATIC",
-    address: ethers.constants.AddressZero,
+    address: constants.AddressZero,
     imgUrl: "/icons/chain/polygon.png",
   },
   {
@@ -119,7 +119,7 @@ const TESTNET_TOKENS: TokenData[] = [
     name: "Chiado xDAI",
     decimals: 18,
     symbol: "xDAI",
-    address: ethers.constants.AddressZero,
+    address: constants.AddressZero,
     imgUrl: "https://docs.gnosischain.com/img/tokens/chiado-xdai.png",
   },
   {
@@ -145,6 +145,74 @@ const TESTNET_TOKENS: TokenData[] = [
     symbol: "WBTC",
     address: "0xa83EC0095295E87D9dfe544E4E6EdC48C3B48a34",
     imgUrl: "/icons/token/wbtc.png",
+  },
+
+  //////// WI-FI TOKENS /////////
+  {
+    chainId: TESTNET_CHAINID.Aurora,
+    name: "Aurora ETH",
+    decimals: 18,
+    symbol: "ETH",
+    address: constants.AddressZero,
+    imgUrl: "/icons/chain/aurora.png",
+  },
+  {
+    chainId: TESTNET_CHAINID.Aurora,
+    name: "Aurora WETH",
+    decimals: 18,
+    symbol: "WETH",
+    address: "0x8B2Fc15A64b0e3c0950E10D3FeD032BC2D409cB6",
+    imgUrl: "/icons/chain/aurora.png",
+  },
+  {
+    chainId: TESTNET_CHAINID.Aurora,
+    name: "Tether USD",
+    decimals: 6,
+    symbol: "USDT",
+    address: "0xA97370C6Ec3fB9aad99B70986e0EB6EEc9580e31",
+    imgUrl: "/icons/token/usdt.png",
+  },
+  {
+    chainId: TESTNET_CHAINID.Aurora,
+    name: "USDC",
+    decimals: 6,
+    symbol: "USDC",
+    address: "0xc542020a864AACdC72b6c1178a2694E23cE3300E",
+    imgUrl: "/icons/token/usdc.png",
+  },
+
+  //////// WI-FI TOKENS /////////
+  {
+    chainId: TESTNET_CHAINID.Ethereum,
+    name: "Wi-Fi",
+    decimals: 18,
+    symbol: "WIFI",
+    address: "0xBCF04210D4f6a9907f59a2456f2A4F4a33A849Da",
+    imgUrl: "/icons/token/wifi.png",
+  },
+  {
+    chainId: TESTNET_CHAINID.Aurora,
+    name: "Wi-Fi",
+    decimals: 18,
+    symbol: "WIFI",
+    address: "0xBCF04210D4f6a9907f59a2456f2A4F4a33A849Da",
+    imgUrl: "/icons/token/wifi.png",
+  },
+  {
+    chainId: TESTNET_CHAINID.Gnosis,
+    name: "Wi-Fi",
+    decimals: 18,
+    symbol: "WIFI",
+    address: "0xBCF04210D4f6a9907f59a2456f2A4F4a33A849Da",
+    imgUrl: "/icons/token/wifi.png",
+  },
+  {
+    chainId: TESTNET_CHAINID.Polygon,
+    name: "Wi-Fi",
+    decimals: 18,
+    symbol: "WIFI",
+    address: "0xBCF04210D4f6a9907f59a2456f2A4F4a33A849Da",
+    imgUrl: "/icons/token/wifi.png",
   },
 ];
 

@@ -4,49 +4,50 @@ import { Token } from "modules/Token";
 import { FaArrowRight, FaPlus } from "react-icons/fa";
 import { BlockContainer } from "./BlockContainer";
 import { formatOrfloorTiny } from "utils";
+import { UniswapV2DecomposeTaskData } from "modules/taskManager/tasks/invest/UniswapV2DecomposeTask";
+import { DualTokenIcons } from "components/DualTokenIcons";
 
-interface DecomposeBlockData {
-  baseTokenId: string;
-  farmToken0Id: string;
-  farmToken1Id: string;
-  baseAmount: string;
-  swapAmount0: string;
-  swapAmount1: string;
-  farmAmount0: string;
-  farmAmount1: string;
-  liquidity: string;
-  remainedBaseAmount: string;
-}
 export const DecomposeBlock = ({
-  baseTokenId,
-  farmToken0Id,
-  farmToken1Id,
-  baseAmount,
-  farmAmount0,
-  farmAmount1,
-  // swapAmount0,
-  // swapAmount1,
-  // liquidity,
-  // remainedBaseAmount,
-}: DecomposeBlockData) => {
-  const baseToken = Token.getById(baseTokenId)!;
-  const farmToken0 = Token.getById(farmToken0Id)!;
-  const farmToken1 = Token.getById(farmToken1Id)!;
+  // status,
+  chainId,
+  baseTokenAddr,
+  amountIn,
+  // amountIn0,
+  // amountIn1,
+  decomposedAmountIn0,
+  decomposedAmountIn1,
+  receivedLP,
+  // to,
+  pair,
+}: UniswapV2DecomposeTaskData) => {
+  const baseToken = Token.get(chainId, baseTokenAddr)!;
+  const farmToken0 = Token.get(chainId, pair.token0.address)!;
+  const farmToken1 = Token.get(chainId, pair.token1.address)!;
   return (
     <BlockContainer>
       <Chip color="green" className="mx-4 w-28" content="Decompose" />
       <TokenIcon token={baseToken} size="lg" />
-      <p className="ml-2 text-lg font-bold">{baseAmount}</p>
+      <p className="ml-2 text-lg font-bold">{formatOrfloorTiny(amountIn ?? "")}</p>
       <p className="ml-2 text-lg font-bold">{baseToken.symbol}</p>
 
-      <FaArrowRight className="mx-4" />
-      <TokenIcon token={farmToken0} size="lg" />
-      <p className="ml-2 text-lg font-bold">{formatOrfloorTiny(farmAmount0)}</p>
-      <p className="ml-2 text-lg font-bold">{farmToken0.symbol}</p>
-      <FaPlus className="mx-4" />
-      <TokenIcon token={farmToken1} size="lg" />
-      <p className="ml-2 text-lg font-bold">{formatOrfloorTiny(farmAmount1)}</p>
-      <p className="ml-2 text-lg font-bold">{farmToken1.symbol}</p>
+      <FaArrowRight className="mx-3" />
+      <DualTokenIcons token0={farmToken0} token1={farmToken1} size="lg" />
+      <div className="flex flex-col ml-2 -my-2">
+        <p>
+          {formatOrfloorTiny(decomposedAmountIn0 ?? "")} {"  "}
+          {farmToken0.symbol}
+        </p>
+        <p className="-mt-1">
+          {formatOrfloorTiny(decomposedAmountIn1 ?? "")} {"  "}{" "}
+          {farmToken1.symbol}
+        </p>
+      </div>
+
+      <FaArrowRight className="mx-3" />
+      <DualTokenIcons token0={farmToken0} token1={farmToken1} size="lg" />
+      <p className="ml-1.5">
+        {formatOrfloorTiny(receivedLP ?? "")} {"  LP"}
+      </p>
 
       <div className="border-l pl-4 ml-4 flex">
         <Chip color="gray" size="sm" content="via" />
