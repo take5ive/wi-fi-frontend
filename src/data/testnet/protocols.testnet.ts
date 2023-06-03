@@ -1,6 +1,6 @@
-import { CHAINID, ProtocolData } from "interfaces/config-data.interface";
-import TESTNET_CHAINID from "./chainIds.testnet";
+import { ProtocolData } from "interfaces/config-data.interface";
 import { ethers } from "ethers";
+import TESTNET_CHAINID from "./chainIds.testnet";
 
 const UniswapV2Protocols: ProtocolData<"UniswapV2">[] = [
   {
@@ -106,7 +106,7 @@ const bridgeAddressBook = {
   80001: "0xe56E7DaB24A0Ee78cB3Fd5Bf0576Af15804893cb",
   10200: "0xe56E7DaB24A0Ee78cB3Fd5Bf0576Af15804893cb",
   1313161555: "0x0645477b8D674d44adA65BdfFF19C8c3B7da97bc",
-}
+};
 for (let i = 0; i < chains.length; i++) {
   for (let j = 0; j < chains.length; j++) {
     if (i === j) continue;

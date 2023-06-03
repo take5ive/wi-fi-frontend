@@ -1,7 +1,7 @@
 import { Chip } from "components/Chip";
 import { TokenIcon } from "components/TokenIcon";
 import { Token } from "modules/Token";
-import { FaArrowRight, FaPlus } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { BlockContainer } from "./BlockContainer";
 import { formatOrfloorTiny } from "utils";
 import { UniswapV2DecomposeTaskData } from "modules/taskManager/tasks/invest/UniswapV2DecomposeTask";

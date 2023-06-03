@@ -1,6 +1,5 @@
 import { RunTaskView } from "components/RunTaskView";
 import { TaskStatusEnum } from "interfaces/tasks/task-status.interface";
-import { TokenAmount } from "interfaces/token-amount.interface";
 import { TaskBase } from "modules/taskManager/tasks/TaskBase";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "router/route-names";

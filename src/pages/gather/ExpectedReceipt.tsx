@@ -12,13 +12,6 @@ export const ExpectedReceipt = ({
       ? taskManager.predictedAmountStatus.get(selectedToken)
       : "0";
 
-  const usingProtocols = taskManager
-    ? taskManager.tasks
-        .map((t) => t.getData()?.protocol?.name ?? null)
-        .filter(Boolean)
-        .filter((v, i, a) => a.indexOf(v) === i)
-    : [];
-
   return (
     <div className="mt-4 flex h-[120px]">
       {inputTokensLength === 0 ? (

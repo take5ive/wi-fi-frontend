@@ -1,4 +1,3 @@
-import { useMemo } from "react";
 import { PairSelectionProps } from "./PairSelection";
 import { Token } from "modules/Token";
 
@@ -60,7 +59,6 @@ export const ExpectedReceipt = ({
             >
               {/* <TokenIcon token={selectedToken} size="lg" /> */}
               <p className="ml-1.5 text-2xl font-bold -mt-0.5">
-
                 Invest to {selectedPair.protocol} &nbsp; 🚀
               </p>
             </button>

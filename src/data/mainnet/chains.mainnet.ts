@@ -9,6 +9,7 @@ const MAINNET_CHAINS: { [chainId: number]: ChainData } = {
     rpcUrl: "https://eth.llamarpc.com",
     imgUrl: "/icons/chain/ethereum.png",
     funnelAddress: "0x0000000000000000000000000000000000000001",
+    wETHAddress: "0x0000000000000000000000000000000000000001",
   },
   [MAINNET_CHAINID.Polygon]: {
     id: MAINNET_CHAINID.Polygon,
@@ -17,6 +18,7 @@ const MAINNET_CHAINS: { [chainId: number]: ChainData } = {
     rpcUrl: "https://polygon.llamarpc.com",
     imgUrl: "/icons/chain/polygon.png",
     funnelAddress: "0x0000000000000000000000000000000000000001",
+    wETHAddress: "0x0000000000000000000000000000000000000001",
   },
   // [MAINNET_CHAINID.Binance]: {
   //   id: MAINNET_CHAINID.Binance,

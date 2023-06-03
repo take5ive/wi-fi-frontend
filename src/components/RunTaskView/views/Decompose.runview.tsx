@@ -7,7 +7,6 @@ import {
 } from "modules/taskManager/tasks/invest/UniswapV2DecomposeTask";
 import { useEffect, useState } from "react";
 import { FaArrowDown, FaPlus } from "react-icons/fa";
-import { formatOrfloorTiny } from "utils";
 
 interface DecomposeRunViewProps {
   task: UniswapV2DecomposeTask;
