@@ -23,11 +23,11 @@ export const RunTaskView = ({ task, status, run }: RunTaskViewProps) => {
         <RunView task={task} />
       </div>
       {status === TaskStatusEnum.Pending ? (
-        <button onClick={run} className="btn btn-primary">
+        <button onClick={run} className="btn btn-primary py-4">
           Run
         </button>
       ) : [TaskStatusEnum.Signed, TaskStatusEnum.Sent].includes(status) ? (
-        <div className="btn text-neutral-400 border-[1.5px] border-neutral-400">
+        <div className="btn text-neutral-400 border-[1.5px] border-neutral-400 py-4">
           <AiOutlineLoading3Quarters className="animate-spin" />
           <p className="ml-4 mr-6">
             {status === TaskStatusEnum.Signed
@@ -36,7 +36,7 @@ export const RunTaskView = ({ task, status, run }: RunTaskViewProps) => {
           </p>
         </div>
       ) : status === TaskStatusEnum.Predicting ? (
-        <div className="btn text-primary-500/80 border-[1.5px] border-primary-500/80">
+        <div className="btn text-primary-500/80 border-[1.5px] border-primary-500/80 py-4">
           <AiOutlineLoading3Quarters className="animate-spin" />
           <p className="ml-4 mr-6">Transaction Done!</p>
         </div>

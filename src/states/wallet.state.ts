@@ -49,6 +49,7 @@ export const useConnectWallet = () => {
   const disconnect = async () => {
     setAccount(null);
     resetChainId();
+    localStorage.clear();
   };
 
   //@ts-ignore

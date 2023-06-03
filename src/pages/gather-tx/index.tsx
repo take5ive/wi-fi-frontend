@@ -5,7 +5,7 @@ import { NextTransactions } from "./NextTransactions";
 import { useSigner } from "states/wallet.state";
 
 function GatherTx() {
-  const { inputTokenAmounts, dstToken, manager, currentTask, status, isDone } =
+  const { inputTokenAmounts, dstToken, manager, currentTask, status, received } =
     useValidateGatherQuery();
   const { signer } = useSigner();
   const run = async () => {
@@ -21,7 +21,7 @@ function GatherTx() {
       </p>
       <div className="mt-6 grid grid-cols-[1fr_2fr] gap-12">
         <CurrentTransaction
-          done={isDone}
+          received={received}
           task={currentTask}
           status={status}
           run={run}

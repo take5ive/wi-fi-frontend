@@ -1,5 +1,6 @@
 import { RunTaskView } from "components/RunTaskView";
 import { TaskStatusEnum } from "interfaces/tasks/task-status.interface";
+import { TokenAmount } from "interfaces/token-amount.interface";
 import { TaskBase } from "modules/taskManager/tasks/TaskBase";
 import { useNavigate } from "react-router-dom";
 import ROUTES from "router/route-names";
@@ -7,14 +8,14 @@ import ROUTES from "router/route-names";
 interface CurrentTransactionProps {
   task: TaskBase<any> | null;
   status: TaskStatusEnum;
-  done: boolean;
+  received: string | undefined;
   run: () => Promise<void>;
 }
 
 export const CurrentTransaction = ({
   task,
   status,
-  done,
+  received,
   run,
 }: CurrentTransactionProps) => {
   const nav = useNavigate();
@@ -22,12 +23,15 @@ export const CurrentTransaction = ({
 
   return (
     <div className="flex flex-1 flex-col">
-      {done ? (
+      {received ? (
         <>
-          <p className="text-2xl font-semibold mb-4">
+          <p className="text-2xl font-semibold mb-2">
             All Transactions are done!
           </p>
-          <button onClick={goHome} className="btn btn-primary">
+          <p className="text-lg mb-4">
+            You invested to {received} 🚀
+          </p>
+          <button onClick={goHome} className="btn btn-primary text-lg">
             Go back to main page
           </button>
         </>

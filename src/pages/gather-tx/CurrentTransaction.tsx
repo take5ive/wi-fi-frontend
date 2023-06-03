@@ -7,14 +7,14 @@ import ROUTES from "router/route-names";
 interface CurrentTransactionProps {
   task: TaskBase<any> | null;
   status: TaskStatusEnum;
-  done: boolean;
+  received: string | undefined;
   run: () => Promise<void>;
 }
 
 export const CurrentTransaction = ({
   task,
   status,
-  done,
+  received,
   run,
 }: CurrentTransactionProps) => {
   const nav = useNavigate();
@@ -22,12 +22,12 @@ export const CurrentTransaction = ({
 
   return (
     <div className="flex flex-1 flex-col">
-      {done ? (
+      {received ? (
         <>
           <p className="text-2xl font-semibold mb-4">
             All Transactions are done!
           </p>
-          <button onClick={goHome} className="btn btn-primary">
+          <button onClick={goHome} className="btn btn-primary text-lg">
             Go back to main page
           </button>
         </>

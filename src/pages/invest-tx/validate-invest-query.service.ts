@@ -38,7 +38,7 @@ export const useValidateInvestQuery = () => {
   const [invest, setInvest] = useState<InvestPair | null>(null);
   const [manager, setManager] = useState<TaskManager | null>(null);
   const [status, setStatus] = useState<TaskStatusEnum>(TaskStatusEnum.None);
-  const [isDone, setIsDone] = useState(false);
+  const [received, setReceived] = useState<string>();
   const [currentTask, setCurrentTask] = useState<TaskBase<any> | null>(null);
 
   const initInvest = async () => {
@@ -71,7 +71,15 @@ export const useValidateInvestQuery = () => {
         setCurrentTask(task ?? null);
         setStatus(status);
         if (currentId >= manager.tasks.length) {
-          setIsDone(true);
+          const received = manager.doneAmountStatus.get(
+            new Token({
+              chainId: invest.chainId,
+              address: invest.address,
+              decimals: 18,
+              symbol: "LP",
+            })
+          );
+          setReceived(`${received} LP in ${invest.protocol}`);
         }
       });
     });
@@ -87,6 +95,6 @@ export const useValidateInvestQuery = () => {
     inputTokenAmounts,
     invest,
     manager,
-    isDone,
+    received,
   };
 };

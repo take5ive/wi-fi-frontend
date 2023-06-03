@@ -37,15 +37,15 @@ export const PartitionRunView = ({ task }: PartitionRunViewProps) => {
         </p>
       </div>
       <FaArrowDown className="mx-auto my-3" />
-      <div className="flex items-center justify-center">
-        <div className="flex items-end">
+      <div className="flex items-center">
+        <div className="flex flex-1 items-center">
           <TokenIcon token={baseToken} size="lg" />
           <p className="font-semibold text-xl ml-2">
             {+data.amountInBase!} {baseToken.symbol}
           </p>
         </div>
         <FaPlus className="mx-4 text-neutral-500" />
-        <div className="flex items-end">
+        <div className="flex flex-1 items-center">
           <TokenIcon token={farmToken} size="lg" />
           <p className="font-semibold text-xl ml-2">
             {+data.amountInFarm!} {farmToken.symbol}

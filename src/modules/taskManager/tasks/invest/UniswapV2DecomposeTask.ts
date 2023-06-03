@@ -48,10 +48,14 @@ export class UniswapV2DecomposeTask extends TaskBase<UniswapV2DecomposeTaskData>
     if (signer) funnel = funnel.connect(signer);
 
     const baseToken = Token.getById(`${this.chainId}_${data.baseTokenAddr}`)!;
-    const token0 = Token.getById(`${this.chainId}_${data.pair.token0.address}`)!;
-    const token1 = Token.getById(`${this.chainId}_${data.pair.token1.address}`)!;
+    const token0 = Token.getById(
+      `${this.chainId}_${data.pair.token0.address}`
+    )!;
+    const token1 = Token.getById(
+      `${this.chainId}_${data.pair.token1.address}`
+    )!;
     const amountIn = amountStatus.get(baseToken)!;
-    return { funnel, baseToken, token0, token1 , amountIn, data };
+    return { funnel, baseToken, token0, token1, amountIn, data };
   }
 
   async run(

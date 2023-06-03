@@ -5,7 +5,7 @@ import { NextTransactions } from "./NextTransactions";
 import { useSigner } from "states/wallet.state";
 
 function InvestTx() {
-  const { inputTokenAmounts, invest, manager, currentTask, status, isDone } =
+  const { inputTokenAmounts, invest, manager, currentTask, status, received } =
     useValidateInvestQuery();
   const { signer } = useSigner();
   const run = async () => {
@@ -21,7 +21,7 @@ function InvestTx() {
       </p>
       <div className="mt-6 grid grid-cols-[1fr_2fr] gap-12">
         <CurrentTransaction
-          done={isDone}
+          received={received}
           task={currentTask}
           status={status}
           run={run}

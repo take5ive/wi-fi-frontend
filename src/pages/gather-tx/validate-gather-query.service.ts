@@ -38,7 +38,7 @@ export const useValidateGatherQuery = () => {
 
   const [manager, setManager] = useState<TaskManager | null>(null);
   const [status, setStatus] = useState<TaskStatusEnum>(TaskStatusEnum.None);
-  const [isDone, setIsDone] = useState(false);
+  const [received, setReceived] = useState<string>();
   const [currentTask, setCurrentTask] = useState<TaskBase<any> | null>(null);
 
   useEffect(() => {
@@ -62,8 +62,9 @@ export const useValidateGatherQuery = () => {
         const task = manager.tasks[currentId];
         setCurrentTask(task ?? null);
         setStatus(status);
-        if(currentId >= manager.tasks.length) {
-          setIsDone(true);
+        if (currentId >= manager.tasks.length) {
+          const received = manager.doneAmountStatus.get(dstToken!);
+          setReceived(`${received} ${dstToken!.symbol}`);
         }
       });
     });
@@ -75,6 +76,6 @@ export const useValidateGatherQuery = () => {
     inputTokenAmounts,
     dstToken,
     manager,
-    isDone
+    received,
   };
 };
