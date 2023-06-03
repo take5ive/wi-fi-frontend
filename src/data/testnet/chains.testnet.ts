@@ -29,15 +29,15 @@ const TESTNET_CHAINS: { [chainId: number]: ChainData } = {
   //   funnelAddress: "0x41dDC4b63c24d8E2892C7f7bA6DaabF9B36f6290",
   //   wETHAddress: ""
   // },
-  [TESTNET_CHAINID.Klaytn]: {
-    id: TESTNET_CHAINID.Klaytn,
-    name: "Klaytn",
-    symbol: "KLAY",
-    rpcUrl: "https://public-node-api.klaytnapi.com/v1/baobab",
-    imgUrl: "/icons/chain/klaytn.png",
-    funnelAddress: "0x0000000000000000000000000000000000000001",
-    wETHAddress: "",
-  },
+  // [TESTNET_CHAINID.Klaytn]: {
+  //   id: TESTNET_CHAINID.Klaytn,
+  //   name: "Klaytn",
+  //   symbol: "KLAY",
+  //   rpcUrl: "https://public-node-api.klaytnapi.com/v1/baobab",
+  //   imgUrl: "/icons/chain/klaytn.png",
+  //   funnelAddress: "0x0000000000000000000000000000000000000001",
+  //   wETHAddress: "",
+  // },
   [TESTNET_CHAINID.Gnosis]: {
     id: TESTNET_CHAINID.Gnosis,
     name: "Chiado",

@@ -4,7 +4,7 @@ export enum CHAINID {
   Ethereum = chainIds.Ethereum,
   Polygon = chainIds.Polygon,
   // Binance = chainIds.Binance,
-  Klaytn = chainIds.Klaytn,
+  // Klaytn = chainIds.Klaytn,
 }
 
 export interface ChainData {

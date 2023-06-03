@@ -20,11 +20,11 @@ function ConnectWalletModal({ closeModal }: ConnectWalletModalProps) {
           Please connect your wallet to continue
         </p>
         {account ? (
-          <div className="btn border border-orange-400 text-orange-500">
+          <div className="btn border border-primary-400 text-primary-500">
             &#10004; Connected to {ellipsisAddress(account)}
           </div>
         ) : (
-          <button onClick={connect} className="btn bg-orange-400 text-white">
+          <button onClick={connect} className="btn bg-primary-500 text-white">
             Connect Metamask
           </button>
         )}

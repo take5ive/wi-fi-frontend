@@ -3,17 +3,17 @@ import { ethers } from "ethers";
 import TESTNET_CHAINID from "./chainIds.testnet";
 
 const UniswapV2Protocols: ProtocolData<"UniswapV2">[] = [
-  {
-    usage: "swap",
-    type: "UniswapV2",
-    name: "MYswapV2",
-    chainId: TESTNET_CHAINID.Klaytn,
-    data: {
-      factoryAddress: "0xd515761A0B3B0f8ABAedbf5Ce98DAAe841dC5381",
-      routerAddress: "0xDc929b5040e15085098C76deF2Fd72698695522b",
-      wETHAddress: "0x38266E85782aa99A650E758E39f8B2eeDb189183",
-    },
-  },
+  // {
+  //   usage: "swap",
+  //   type: "UniswapV2",
+  //   name: "MYswapV2",
+  //   chainId: TESTNET_CHAINID.Klaytn,
+  //   data: {
+  //     factoryAddress: "0xd515761A0B3B0f8ABAedbf5Ce98DAAe841dC5381",
+  //     routerAddress: "0xDc929b5040e15085098C76deF2Fd72698695522b",
+  //     wETHAddress: "0x38266E85782aa99A650E758E39f8B2eeDb189183",
+  //   },
+  // },
   {
     usage: "swap",
     type: "UniswapV2",

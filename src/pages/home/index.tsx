@@ -17,16 +17,6 @@ export function Home() {
       </div>
       <div className="flex flex-[3] flex-col ml-20 space-y-12">
         <MenuItem
-          title="Gather Multichain Assets (via swaps, bridges)"
-          linkTo={ROUTES.GATHER}
-          Icon={FaCompressArrowsAlt}
-          iconSize={64}
-          descriptions={[
-            "Bring all your assets from different blockchains together effortlessly with Funnel",
-            "while saving on costs!",
-          ]}
-        />
-        <MenuItem
           title="Invest"
           linkTo={ROUTES.INVEST}
           Icon={AiOutlineStock}
@@ -34,6 +24,16 @@ export function Home() {
           descriptions={[
             "New to DeFi investments and not sure where to start?",
             "Give Funnel a try and explore step by step!",
+          ]}
+        />
+        <MenuItem
+          title="Gather Multichain Assets (via swaps, bridges)"
+          linkTo={ROUTES.GATHER}
+          Icon={FaCompressArrowsAlt}
+          iconSize={64}
+          descriptions={[
+            "Bring all your assets from different blockchains together effortlessly with Funnel",
+            "while saving on costs!",
           ]}
         />
         <MenuItem
