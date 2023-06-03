@@ -58,7 +58,7 @@ export const useConnectWallet = () => {
   //@ts-ignore
   window.ethereum?.on("chainChanged", (chainId: string) => {
     setChainId(+chainId);
-    nav("/");
+    // nav("/");
   });
 
   return {
