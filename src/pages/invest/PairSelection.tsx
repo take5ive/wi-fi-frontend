@@ -54,8 +54,8 @@ export const PairSelection = (props: PairSelectionProps) => {
 
       <hr className="mb-6" />
 
-      {/* TOKENS LIST GRID */}
-      <div className="grid grid-cols-3 mt-4 gap-6">
+      {/* PAIRS LIST GRID */}
+      <div className="grid 2xl:grid-cols-3 grid-cols-2 mt-4 gap-6">
         {filteredPairs.map((pair) => (
           <PairItem
             key={pair.id}

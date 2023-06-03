@@ -1,4 +1,4 @@
-import { Signer } from "ethers";
+import { Signer, constants } from "ethers";
 import { TaskBase } from "../TaskBase";
 import { AmountsStatus } from "../AmountStatus";
 import { Chain } from "modules/Chain";
@@ -7,6 +7,7 @@ import { TaskStatusEnum } from "interfaces/tasks/task-status.interface";
 import { CHAINID } from "interfaces/config-data.interface";
 import { InvestPair } from "interfaces/invest-pair.interface";
 import { formatEther } from "ethers/lib/utils";
+import { substituteWETH } from "./_substituteWETH";
 
 /**
  * Swap all of `fromToken` to `toToken`
@@ -73,11 +74,17 @@ export class UniswapV2PartitionTask extends TaskBase<UniswapV2PartitionTaskData>
     });
     const beforeLp = await lpToken.getContract().balanceOf(data.to);
 
+    let value = constants.Zero;
+    if (baseToken.isNativeToken()) {
+      value = baseToken.parse(amountIn);
+    }
+
     const tx = await funnel.partitionAndAddLiquidity(
       lpToken.address,
-      baseToken.address,
+      substituteWETH(baseToken).address,
       data.to,
-      baseToken.parse(amountIn)
+      baseToken.parse(amountIn),
+      { value }
     );
 
     this.changeStatus(TaskStatusEnum.Sent);
@@ -96,7 +103,7 @@ export class UniswapV2PartitionTask extends TaskBase<UniswapV2PartitionTaskData>
     const { swapAmount, swappedAmount, liquidity } =
       await funnel.calculateOptimalRebalanceAmount(
         data.pair.address,
-        baseToken.address,
+        substituteWETH(baseToken).address,
         baseToken.parse(amountIn),
         "0"
       );

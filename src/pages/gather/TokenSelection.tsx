@@ -56,7 +56,7 @@ export const TokenSelection = (props: TokenSelectionProps) => {
       <hr className="mb-6" />
 
       {/* TOKENS LIST GRID */}
-      <div className="grid grid-cols-3 mt-4 gap-6">
+      <div className="grid 2xl:grid-cols-3 grid-cols-2 mt-4 gap-6">
         {filteredTokens.map((token) => (
           <TokenItem
             selected={selectedToken?.id === token.id}

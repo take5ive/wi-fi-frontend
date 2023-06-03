@@ -1,4 +1,4 @@
-import { Signer } from "ethers";
+import { Signer, ethers } from "ethers";
 import { TaskBase } from "../TaskBase";
 import { AmountsStatus } from "../AmountStatus";
 import { Chain } from "modules/Chain";
@@ -7,6 +7,7 @@ import { TaskStatusEnum } from "interfaces/tasks/task-status.interface";
 import { CHAINID } from "interfaces/config-data.interface";
 import { InvestPair } from "interfaces/invest-pair.interface";
 import { formatEther } from "ethers/lib/utils";
+import { substituteWETH } from "./_substituteWETH";
 
 /**
  * Swap all of `fromToken` to `toToken`
@@ -82,12 +83,21 @@ export class UniswapV2RebalanceTask extends TaskBase<UniswapV2RebalanceTaskData>
       .balanceOf(lpToken.address);
     console.log(baseReserve.toString(), farmReserve.toString());
 
+    let value = ethers.constants.Zero;
+    if (baseToken.isNativeToken()) {
+      value = baseToken.parse(amountInBase);
+    }
+    if (farmToken.isNativeToken()) {
+      value = farmToken.parse(amountInFarm);
+    }
+
     const tx = await funnel.rebalanceAndAddLiquidity(
       lpToken.address,
-      baseToken.address,
+      substituteWETH(baseToken).address,
       data.to,
       baseToken.parse(amountInBase),
-      farmToken.parse(amountInFarm)
+      farmToken.parse(amountInFarm),
+      { value }
     );
 
     this.changeStatus(TaskStatusEnum.Sent);
@@ -109,7 +119,7 @@ export class UniswapV2RebalanceTask extends TaskBase<UniswapV2RebalanceTaskData>
     const { swapAmount, swappedAmount, liquidity, swap0 } =
       await funnel.calculateOptimalRebalanceAmount(
         data.pair.address,
-        baseToken.address,
+        substituteWETH(baseToken).address,
         baseToken.parse(amountInBase),
         farmToken.parse(amountInFarm)
       );

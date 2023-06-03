@@ -21,7 +21,7 @@ export const investTasks = (
   if (resultTokens.length === 1) {
     const resultToken = resultTokens[0];
     // approve resultToken
-    tasks.push(new ApproveTask(resultToken, chain.funnelAddress, "Funnel"));
+    tasks.push(new ApproveTask(resultToken, chain.funnelAddress, `${chain.name} Funnel`));
 
     if (resultToken.id === dstToken0.id || resultToken.id === dstToken1.id) {
       // partition
@@ -51,10 +51,10 @@ export const investTasks = (
 
       // rebalance
       if (!dstToken0.isNativeToken()) {
-        tasks.push(new ApproveTask(dstToken0, chain.funnelAddress, "Funnel"));
+        tasks.push(new ApproveTask(dstToken0, chain.funnelAddress, `${chain.name} Funnel`));
       }
       if (!dstToken1.isNativeToken()) {
-        tasks.push(new ApproveTask(dstToken1, chain.funnelAddress, "Funnel"));
+        tasks.push(new ApproveTask(dstToken1, chain.funnelAddress, `${chain.name} Funnel`));
       }
       const rebalanceTasks = new UniswapV2RebalanceTask(
         dstToken0.address,

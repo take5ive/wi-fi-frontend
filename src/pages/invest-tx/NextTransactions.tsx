@@ -1,4 +1,4 @@
-import TasksView from "components/TasksView";
+import TaskBlockListView from "components/TaskBlocks";
 import { TaskManager } from "modules/taskManager";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";
 
@@ -12,7 +12,7 @@ export const NextTransactions = ({ manager }: NextTransactionsProps) => {
       <p className="text-2xl font-semibold mb-4">Next Transactions</p>
       {manager && (
         <div className="mt-4">
-          <TasksView manager={manager} />
+          <TaskBlockListView manager={manager} />
         </div>
       )}
     </div>

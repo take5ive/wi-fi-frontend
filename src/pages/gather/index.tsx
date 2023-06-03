@@ -56,7 +56,7 @@ export function Gather() {
           <p className="text-2xl font-semibold mb-4"> Input Assets</p>
           <SelectInputAssets setTokenAmounts={setInputTokenAmounts} />
         </div>
-        <div className="flex mx-20 h-[600px] items-center justify-center">
+        <div className="flex mx-12 h-[600px] items-center justify-center">
           <IoIosAirplane size={40} className="text-primary-500" />
         </div>
 

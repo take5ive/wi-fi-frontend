@@ -6,10 +6,10 @@ import { TaskManager } from "modules/taskManager";
 import { useEffect, useState } from "react";
 import { TaskBlock } from "./TaskBlock";
 
-interface TasksViewProps {
+interface TaskBlockListViewProps {
   manager: TaskManager;
 }
-const TasksView = ({ manager }: TasksViewProps) => {
+const TaskBlockListView = ({ manager }: TaskBlockListViewProps) => {
   const [status, setStatus] = useState<TaskStatus>({
     currentId: 0,
     status: TaskStatusEnum.None,
@@ -39,4 +39,4 @@ const TasksView = ({ manager }: TasksViewProps) => {
   );
 };
 
-export default TasksView;
+export default TaskBlockListView;

@@ -23,7 +23,7 @@ export const useSelectInputAssets = (
 ) => {
   const tokens = Token.getAll();
   const balances = useBalanceList(tokens);
-  const isLoading = balances.every((b) => b === '');
+  const isLoading = balances.every((b) => b === "");
 
   // balance가 0 이상으로, 투자 가능한 토큰들의 모임
   // balance가 0이라서 투자할 수 없는 토큰들의 모임
@@ -55,7 +55,6 @@ export const useSelectInputAssets = (
     setTokenAmounts((prev) => {
       const next = [...prev];
       const { token } = tokenWithBalances[index];
-      console.log(token.symbol);
       const i = prev.findIndex((t) => t.token.id === token.id);
       if (i !== -1) {
         if (+amount > 0) {
