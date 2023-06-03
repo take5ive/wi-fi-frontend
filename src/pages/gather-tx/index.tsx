@@ -19,7 +19,7 @@ function GatherTx() {
       <p className="text-5xl font-bold">
         Gather {inputTokenAmounts.length} Assets Into {dstToken.symbol}
       </p>
-      <div className="mt-6 grid grid-cols-[2fr_3fr] gap-12">
+      <div className="mt-6 grid grid-cols-[1fr_2fr] gap-12">
         <CurrentTransaction
           done={isDone}
           task={currentTask}

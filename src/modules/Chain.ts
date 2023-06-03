@@ -11,6 +11,7 @@ export class Chain implements ChainData {
   rpcUrl!: string;
   imgUrl!: string;
   funnelAddress!: string;
+  wETHAddress!: string;
 
   constructor(chainData: ChainData) {
     Object.assign(this, chainData);

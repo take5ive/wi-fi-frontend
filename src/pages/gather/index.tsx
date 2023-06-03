@@ -9,6 +9,7 @@ import { useWallet } from "states/wallet.state";
 import { gatherTasks } from "modules/taskManager/taskRouter/gatherTasks";
 import { Layout } from "pages/common/Layout";
 import { useNavigate } from "react-router-dom";
+import { Menus } from "pages/common/Menus";
 
 export function Gather() {
   const { account } = useWallet();
@@ -50,7 +51,16 @@ export function Gather() {
 
   return (
     <Layout>
-      <p className="text-5xl font-bold">Gather Multichain Assets</p>
+      <div className="flex items-start justify-between">
+        <p className="text-5xl font-bold">Gather Multichain Assets</p>
+        <Menus
+          menus={[
+            { name: "Home", path: "/" },
+            { name: "Invest", path: "/invest" },
+            { name: "Withdraw", path: "/withdraw" },
+          ]}
+        />
+      </div>
       <div className="flex mt-6">
         <div>
           <p className="text-2xl font-semibold mb-4"> Input Assets</p>

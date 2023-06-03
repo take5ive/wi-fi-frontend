@@ -22,9 +22,11 @@ export const investTasks = (
   if (resultTokens.length === 1) {
     const resultToken = resultTokens[0];
     // approve resultToken
-    tasks.push(
-      new ApproveTask(resultToken, chain.funnelAddress, `${chain.name} Funnel`)
-    );
+    if(!resultToken.isNativeToken()){
+      tasks.push(
+        new ApproveTask(resultToken, chain.funnelAddress, `${chain.name} Funnel`)
+      );
+    }
 
     if (resultToken.id === dstToken0.id || resultToken.id === dstToken1.id) {
       // partition

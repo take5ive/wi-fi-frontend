@@ -9,6 +9,7 @@ import { PairSelection } from "./PairSelection";
 import { useDestinationPair } from "./dst-pair.service";
 import { investTasks } from "modules/taskManager/taskRouter/investTasks";
 import { useNavigate } from "react-router-dom";
+import { Menus } from "pages/common/Menus";
 
 export function Invest() {
   const { account } = useWallet();
@@ -21,9 +22,9 @@ export function Invest() {
   const onClickInvest = () => {
     if (!dstPairProps.selectedPair) return;
     nav(
-      `/invest/tx?${inputTokenAmounts.map(
-        (t) => `${t.token.id}=${t.amount}&`
-      ).join('')}invest=${dstPairProps.selectedPair.id}`
+      `/invest/tx?${inputTokenAmounts
+        .map((t) => `${t.token.id}=${t.amount}&`)
+        .join("")}invest=${dstPairProps.selectedPair.id}`
     );
   };
 
@@ -50,7 +51,16 @@ export function Invest() {
   }, [inputTokenAmounts, dstPairProps.selectedPair?.id]);
   return (
     <Layout>
-      <p className="text-5xl font-bold">Invest to DeFi Pools</p>
+      <div className="flex items-start justify-between">
+        <p className="text-5xl font-bold">Invest to DeFi Pools</p>
+        <Menus
+          menus={[
+            { name: "Home", path: "/" },
+            { name: "Gather", path: "/gather" },
+            { name: "Withdraw", path: "/withdraw" },
+          ]}
+        />
+      </div>
       <div className="flex mt-6">
         <div>
           <p className="text-2xl font-semibold mb-4"> Input Assets</p>

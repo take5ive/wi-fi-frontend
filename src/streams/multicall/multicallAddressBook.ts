@@ -28,6 +28,7 @@ const multicallAddressBook: { [chainId: number]: string } = {
   44787: "0x5cb6D4511094e0cDDe7bcf4f7D9306be2389ebA1",
   10200: "0x80C7056f1AAC7Df52518cAeCd8b312c7F63Dce40",
   0xbfc0: "0xBe9f10471B6A5c4DF5b7c71C501e4e863ecBbf41",
+  1313161555: "0xb8FD8E934B2a67C88CE1904b6F5e3EFEe9442481",
 };
 
 export default multicallAddressBook;

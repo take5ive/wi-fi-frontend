@@ -19,7 +19,7 @@ export const RunTaskView = ({ task, status, run }: RunTaskViewProps) => {
   return (
     // <section className="flex flex-col border rounded-lg aspect-video px-6 py-4">
     <section className="flex flex-col border rounded-lg px-6 py-4">
-      <div className="flex-1 mb-4">
+      <div className="flex-1 mb-2">
         <RunView task={task} />
       </div>
       {status === TaskStatusEnum.Pending ? (

@@ -158,14 +158,6 @@ const TESTNET_TOKENS: TokenData[] = [
   },
   {
     chainId: TESTNET_CHAINID.Aurora,
-    name: "Aurora WETH",
-    decimals: 18,
-    symbol: "WETH",
-    address: "0x8B2Fc15A64b0e3c0950E10D3FeD032BC2D409cB6",
-    imgUrl: "/icons/chain/aurora.png",
-  },
-  {
-    chainId: TESTNET_CHAINID.Aurora,
     name: "Tether USD",
     decimals: 6,
     symbol: "USDT",

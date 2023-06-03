@@ -14,6 +14,7 @@ export interface ChainData {
   rpcUrl: string;
   imgUrl: string;
   funnelAddress: string;
+  wETHAddress: string;
 }
 
 /**
