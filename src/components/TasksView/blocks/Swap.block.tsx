@@ -4,7 +4,7 @@ import { Token } from "modules/Token";
 import { FaArrowRight } from "react-icons/fa";
 import { BlockContainer } from "./BlockContainer";
 import { formatOrfloorTiny } from "utils";
-import { UniswapV2TaskData } from "modules/taskManager/tasks/UniswapV2Task";
+import { UniswapV2SwapTaskData } from "modules/taskManager/tasks/move/UniswapV2SwapTask";
 
 export const SwapBlock = ({
   chainId,
@@ -13,7 +13,7 @@ export const SwapBlock = ({
   amountIn,
   amountOut,
   protocol,
-}: UniswapV2TaskData) => {
+}: UniswapV2SwapTaskData) => {
   const fromToken = Token.get(chainId, fromTokenAddr)!;
   const toToken = Token.get(chainId, toTokenAddr)!;
   return (

@@ -1,5 +1,4 @@
 import Modal from "components/Modal";
-import { Chain } from "modules/Chain";
 import { useEffect } from "react";
 import { useConnectWallet } from "states/wallet.state";
 import { ellipsisAddress } from "utils";

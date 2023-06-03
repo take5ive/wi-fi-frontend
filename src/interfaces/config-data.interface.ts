@@ -3,7 +3,7 @@ import { chainIds } from "data";
 export enum CHAINID {
   Ethereum = chainIds.Ethereum,
   Polygon = chainIds.Polygon,
-  Binance = chainIds.Binance,
+  // Binance = chainIds.Binance,
   Klaytn = chainIds.Klaytn,
 }
 

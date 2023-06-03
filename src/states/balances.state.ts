@@ -34,7 +34,7 @@ const fetchBalancesIndex = atom<number>({
 const fetchBalancesQuery = selector<TokenBalanceInChain>({
   key: "selector/fetch-balances",
   get: async ({ get }) => {
-    const index = get(fetchBalancesIndex);
+    get(fetchBalancesIndex);
     const account = get(accountAtom);
 
     if (!account) {
@@ -64,7 +64,7 @@ const fetchBalancesQuery = selector<TokenBalanceInChain>({
               tokens.map((t: SimpleToken) => t.address),
               chain.getProvider()
             );
-          } catch(e) {
+          } catch (e) {
             console.log(e, chainId);
 
             // error 시에는 0으로 set

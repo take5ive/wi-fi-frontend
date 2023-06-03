@@ -14,9 +14,9 @@ export const PartitionBlock = ({
   amountIn,
   amountInBase,
   amountInFarm,
-  receivedLP,
-  to,
-  pair,
+  // receivedLP,
+  // to,
+  // pair,
 }: UniswapV2PartitionTaskData) => {
   console.log(baseTokenAddr, farmTokenAddr)
   const baseToken = Token.get(chainId, baseTokenAddr)!;

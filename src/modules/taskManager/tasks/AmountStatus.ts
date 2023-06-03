@@ -1,4 +1,4 @@
-import { BigNumber, constants } from "ethers";
+import { BigNumber } from "ethers";
 import { CHAINID } from "interfaces/config-data.interface";
 import { TokenAmount } from "interfaces/token-amount.interface";
 import { Token } from "modules/Token";

@@ -10,7 +10,7 @@ export const taskRouter = (
   to: string
 ) => {
   const taskManager = new TaskManager(inputAssets);
-  const dstToken = Token.get(dstPair.chainId, dstPair.pair.token0.address)!;
+  const dstToken = Token.get(dstPair.chainId, dstPair.token0.address)!;
 
   taskManager.pushTasks(
     bundleSwapTasks(

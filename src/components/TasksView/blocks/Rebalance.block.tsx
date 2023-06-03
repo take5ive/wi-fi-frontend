@@ -1,11 +1,9 @@
 import { Chip } from "components/Chip";
-import { TokenIcon } from "components/TokenIcon";
 import { Token } from "modules/Token";
 import { FaArrowRight, FaPlus } from "react-icons/fa";
 import { BlockContainer } from "./BlockContainer";
 import { UniswapV2RebalanceTaskData } from "modules/taskManager/tasks/invest/UniswapV2RebalanceTask";
 import { DualTokenIcons } from "components/DualTokenIcons";
-import { formatOrfloorTiny } from "utils";
 
 export const RebalanceBlock = ({
   chainId,
@@ -15,9 +13,9 @@ export const RebalanceBlock = ({
   amountInFarm,
   rebalancedAmountInBase,
   rebalancedAmountInFarm,
-  receivedLP,
-  to,
-  pair,
+  // receivedLP,
+  // to,
+  // pair,
 }: UniswapV2RebalanceTaskData) => {
   const baseToken = Token.get(chainId, baseTokenAddr)!;
   const farmToken = Token.get(chainId, farmTokenAddr)!;

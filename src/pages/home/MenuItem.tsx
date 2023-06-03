@@ -1,6 +1,6 @@
 import ConnectWalletModal from "components/ConnectWalletModal";
 import { IconType } from "react-icons";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useWallet } from "states/wallet.state";
 import { useModal } from "utils";
 

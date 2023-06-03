@@ -1,5 +1,4 @@
 import { DualTokenIcons } from "components/DualTokenIcons";
-import { TokenIcon } from "components/TokenIcon";
 import { InvestPair } from "interfaces/invest-pair.interface";
 import { Chain } from "modules/Chain";
 import { Token } from "modules/Token";

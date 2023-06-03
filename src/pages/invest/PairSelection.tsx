@@ -1,5 +1,4 @@
 import { Chain } from "modules/Chain";
-import { useDestinationPair } from "./dst-pair.service";
 import { InvestPair } from "interfaces/invest-pair.interface";
 import { CHAINID } from "interfaces/config-data.interface";
 import { TaskManager } from "modules/taskManager";

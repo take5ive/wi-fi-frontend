@@ -2,7 +2,7 @@ import multicall from "streams/multicall";
 import ERC20ABI from "abi/common/ERC20.json";
 import { constants, utils, BigNumber } from "ethers";
 import type { Provider } from "@ethersproject/providers";
-import type { ERC20Interface } from "typechain/ERC20";
+import type { ERC20Interface } from "typechain/common/ERC20";
 import type { MulticallCallDataInput } from "interfaces/multicall.interface";
 
 // @args tokenAddress: address(0) or token address

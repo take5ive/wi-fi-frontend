@@ -506,150 +506,150 @@ const MAINNET_TOKENS: TokenData[] = [
     imgUrl:
       "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/polygon/tokens/images/32/x4/0x0d500B1d8E8eF31E21C99d1Db9A6444d3ADf1270.png",
   },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "AVAX",
-    decimals: 18,
-    symbol: "AVAX",
-    address: "0x1CE0c2827e2eF14D5C4f29a091d735A204794041",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x1CE0c2827e2eF14D5C4f29a091d735A204794041.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "BNB",
-    decimals: 18,
-    symbol: "BNB",
-    address: "0x0000000000000000000000000000000000000000",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/coin/coinImage.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "BTCB",
-    decimals: 18,
-    symbol: "BTCB",
-    address: "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "BUSD",
-    decimals: 18,
-    symbol: "BUSD",
-    address: "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "BiFiB",
-    decimals: 18,
-    symbol: "BiFiB",
-    address: "0x1378e33a09d8bd8e449CFD8A5aBCa0439286d645",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0x1378e33a09d8bd8e449CFD8A5aBCa0439286d645.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "DAI",
-    decimals: 18,
-    symbol: "DAI",
-    address: "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "ETH",
-    decimals: 18,
-    symbol: "ETH",
-    address: "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "FET",
-    decimals: 18,
-    symbol: "FET",
-    address: "0x031b41e504677879370e9DBcF937283A8691Fa7f",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x031b41e504677879370e9DBcF937283A8691Fa7f.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "GPT",
-    decimals: 18,
-    symbol: "GPT",
-    address: "0x153C0c947177e631e3DFc594ba28750d3a921FB5",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x153C0c947177e631e3DFc594ba28750d3a921FB5.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "LINK",
-    decimals: 18,
-    symbol: "LINK",
-    address: "0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "MATIC",
-    decimals: 18,
-    symbol: "MATIC",
-    address: "0xCC42724C6683B7E57334c4E856f4c9965ED682bD",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0xCC42724C6683B7E57334c4E856f4c9965ED682bD.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "SHIB",
-    decimals: 18,
-    symbol: "SHIB",
-    address: "0x2859e4544C4bB03966803b044A93563Bd2D0DD4D",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x2859e4544C4bB03966803b044A93563Bd2D0DD4D.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "USDC",
-    decimals: 18,
-    symbol: "USDC",
-    address: "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "USDT",
-    decimals: 18,
-    symbol: "USDT",
-    address: "0x55d398326f99059fF775485246999027B3197955",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0x55d398326f99059fF775485246999027B3197955.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "WBNB",
-    decimals: 18,
-    symbol: "WBNB",
-    address: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png",
-  },
-  {
-    chainId: MAINNET_CHAINID.Binance,
-    name: "XRP",
-    decimals: 18,
-    symbol: "XRP",
-    address: "0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE",
-    imgUrl:
-      "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE.png",
-  },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "AVAX",
+  //   decimals: 18,
+  //   symbol: "AVAX",
+  //   address: "0x1CE0c2827e2eF14D5C4f29a091d735A204794041",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x1CE0c2827e2eF14D5C4f29a091d735A204794041.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "BNB",
+  //   decimals: 18,
+  //   symbol: "BNB",
+  //   address: "0x0000000000000000000000000000000000000000",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/coin/coinImage.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "BTCB",
+  //   decimals: 18,
+  //   symbol: "BTCB",
+  //   address: "0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x7130d2A12B9BCbFAe4f2634d864A1Ee1Ce3Ead9c.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "BUSD",
+  //   decimals: 18,
+  //   symbol: "BUSD",
+  //   address: "0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "BiFiB",
+  //   decimals: 18,
+  //   symbol: "BiFiB",
+  //   address: "0x1378e33a09d8bd8e449CFD8A5aBCa0439286d645",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0x1378e33a09d8bd8e449CFD8A5aBCa0439286d645.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "DAI",
+  //   decimals: 18,
+  //   symbol: "DAI",
+  //   address: "0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "ETH",
+  //   decimals: 18,
+  //   symbol: "ETH",
+  //   address: "0x2170Ed0880ac9A755fd29B2688956BD959F933F8",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x2170Ed0880ac9A755fd29B2688956BD959F933F8.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "FET",
+  //   decimals: 18,
+  //   symbol: "FET",
+  //   address: "0x031b41e504677879370e9DBcF937283A8691Fa7f",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x031b41e504677879370e9DBcF937283A8691Fa7f.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "GPT",
+  //   decimals: 18,
+  //   symbol: "GPT",
+  //   address: "0x153C0c947177e631e3DFc594ba28750d3a921FB5",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x153C0c947177e631e3DFc594ba28750d3a921FB5.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "LINK",
+  //   decimals: 18,
+  //   symbol: "LINK",
+  //   address: "0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0xF8A0BF9cF54Bb92F17374d9e9A321E6a111a51bD.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "MATIC",
+  //   decimals: 18,
+  //   symbol: "MATIC",
+  //   address: "0xCC42724C6683B7E57334c4E856f4c9965ED682bD",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0xCC42724C6683B7E57334c4E856f4c9965ED682bD.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "SHIB",
+  //   decimals: 18,
+  //   symbol: "SHIB",
+  //   address: "0x2859e4544C4bB03966803b044A93563Bd2D0DD4D",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x2859e4544C4bB03966803b044A93563Bd2D0DD4D.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "USDC",
+  //   decimals: 18,
+  //   symbol: "USDC",
+  //   address: "0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "USDT",
+  //   decimals: 18,
+  //   symbol: "USDT",
+  //   address: "0x55d398326f99059fF775485246999027B3197955",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0x55d398326f99059fF775485246999027B3197955.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "WBNB",
+  //   decimals: 18,
+  //   symbol: "WBNB",
+  //   address: "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/32/x4/0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c.png",
+  // },
+  // {
+  //   chainId: MAINNET_CHAINID.Binance,
+  //   name: "XRP",
+  //   decimals: 18,
+  //   symbol: "XRP",
+  //   address: "0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE",
+  //   imgUrl:
+  //     "https://raw.githubusercontent.com/bifrost-platform/AssetInfo/master/Assets/binance/tokens/images/128/0x1D2F0da169ceB9fC7B3144628dB156f3F6c60dBE.png",
+  // },
  
 ];
 

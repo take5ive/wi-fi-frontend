@@ -73,6 +73,7 @@ export const metamaskSwitchChain = async (chainId: CHAINID):Promise<{
     });
     return {
       ok: true,
+      // @ts-ignore
       signer: new providers.Web3Provider(window.ethereum!).getSigner(),
     };
   } catch (err: any) {

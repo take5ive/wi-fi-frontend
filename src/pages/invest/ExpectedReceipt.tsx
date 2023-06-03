@@ -1,4 +1,3 @@
-import { TokenIcon } from "components/TokenIcon";
 import { PairSelectionProps } from "./PairSelection";
 
 export const ExpectedReceipt = ({

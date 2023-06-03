@@ -22,12 +22,12 @@ export const DecomposeBlock = ({
   farmToken0Id,
   farmToken1Id,
   baseAmount,
-  swapAmount0,
-  swapAmount1,
   farmAmount0,
   farmAmount1,
-  liquidity,
-  remainedBaseAmount,
+  // swapAmount0,
+  // swapAmount1,
+  // liquidity,
+  // remainedBaseAmount,
 }: DecomposeBlockData) => {
   const baseToken = Token.getById(baseTokenId)!;
   const farmToken0 = Token.getById(farmToken0Id)!;
