@@ -66,6 +66,8 @@ export class ConnextBridgeTask extends TaskBase<ConnextBridgeTaskData> {
     const { fromToken, toToken, amountIn, feeAmount } =
       this._getTokenAndAmounts(data, doneAmountStatus);
 
+    console.log({ fromToken, toToken, amountIn, feeAmount });
+
     const core = new Contract(
       data.coreAddress,
       CONNEXT_BRIDGE_ABI,
@@ -77,14 +79,18 @@ export class ConnextBridgeTask extends TaskBase<ConnextBridgeTaskData> {
       to,
       data.fromToken.address,
       to,
-      amountIn,
+      fromToken.parse(amountIn),
       300,
       "0x",
       data.relayerGasFee
     );
-    this.changeData({ phase: "from-sent" });
+
+    console.log('fromTx.hash', fromTx.hash)
     this.changeStatus(TaskStatusEnum.Sent);
+    this.changeData({ phase: "from-sent" });
     const beforeBridgeToAmount = await toToken.getContract().balanceOf(to);
+
+    console.log(beforeBridgeToAmount)
 
     await fromTx.wait();
     this.changeData({ phase: "from-confirmed" });
@@ -96,6 +102,7 @@ export class ConnextBridgeTask extends TaskBase<ConnextBridgeTaskData> {
     while (true) {
       await sleep(5000);
       elapsedTime += 5;
+      console.log('elapsedTime', elapsedTime)
       const currToAmount = await toToken.getContract().balanceOf(to);
       if (currToAmount.gt(beforeBridgeToAmount)) {
         realAmountOut = toToken.format(currToAmount.sub(beforeBridgeToAmount));

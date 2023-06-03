@@ -38,8 +38,9 @@ export class TaskManager {
     const thisTask = this.tasks[current.currentId];
 
     const currChainId = await signer.getChainId();
+    console.log("currChainId:", currChainId, "thisTask.chainId", thisTask.chainId);
     if (currChainId !== thisTask.chainId) {
-      const result = await metamaskSwitchChain(this.tasks[0].chainId);
+      const result = await metamaskSwitchChain(thisTask.chainId);
       if (!result.ok) return;
       signer = result.signer!;
     }

@@ -9,8 +9,8 @@ export function Home() {
   return (
     <div className="w-screen h-screen flex items-center p-20 pb-32">
       <div className="flex flex-[2] flex-col">
-        <p className="text-5xl leading-6">Start DeFi Onboarding with</p>
-        <p className="text-6xl font-bold text-primary-500">Wi.Fi</p>
+        <p className="text-5xl">Start DeFi Onboarding with</p>
+        <p className="-mt-8 text-6xl font-bold text-primary-500">Wi.Fi</p>
         <div className="flex gap-4">
           <WalletConnectButton className="flex-1" />
           <WalletConnectButton className="flex-1" />

@@ -58,7 +58,7 @@ const ConnextBridgeProtocols: ProtocolData<"ConnextBridge">[] = [
     data: {
       coreAddress: "0xFCa08024A6D4bCc87275b1E4A1E22B71fAD7f649",
       dstChainIdentifier: 9991,
-      relayerGasFee: ethers.utils.parseEther("50").toString(),
+      relayerGasFee: ethers.utils.parseEther("0.3").toString(),
       feeBps: 5,
       fromToken: {
         chainId: TESTNET_CHAINID.Ethereum,
@@ -78,7 +78,7 @@ const ConnextBridgeProtocols: ProtocolData<"ConnextBridge">[] = [
     data: {
       coreAddress: "0x2334937846Ab2A3FCE747b32587e1A1A2f6EEC5a",
       dstChainIdentifier: 1735353714,
-      relayerGasFee: ethers.utils.parseEther("0.3").toString(),
+      relayerGasFee: ethers.utils.parseEther("40").toString(),
       feeBps: 5,
       fromToken: {
         chainId: TESTNET_CHAINID.Polygon,

@@ -1,6 +1,6 @@
 import { Chip } from "components/Chip";
 import { Token } from "modules/Token";
-import { FaArrowRight, FaPlus } from "react-icons/fa";
+import { FaArrowRight } from "react-icons/fa";
 import { BlockContainer } from "./BlockContainer";
 import { UniswapV2RebalanceTaskData } from "modules/taskManager/tasks/invest/UniswapV2RebalanceTask";
 import { DualTokenIcons } from "components/DualTokenIcons";

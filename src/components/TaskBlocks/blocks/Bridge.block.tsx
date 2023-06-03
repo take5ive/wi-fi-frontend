@@ -7,7 +7,6 @@ import { formatOrfloorTiny } from "utils";
 import { ConnextBridgeTaskData } from "modules/taskManager/tasks/move/ConnextBridgeTask";
 
 export const BridgeBlock = (props: ConnextBridgeTaskData) => {
-  console.log(props);
   const {
     protocol: {
       name,

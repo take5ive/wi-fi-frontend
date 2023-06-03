@@ -91,6 +91,11 @@ export class UniswapV2RebalanceTask extends TaskBase<UniswapV2RebalanceTaskData>
       value = farmToken.parse(amountInFarm);
     }
 
+    console.log(
+      "FEE",
+      await funnel.feeOf("0x9D734898bfDC6939655D05d6a2923f7efC075606")
+    );
+
     const tx = await funnel.rebalanceAndAddLiquidity(
       lpToken.address,
       substituteWETH(baseToken).address,
