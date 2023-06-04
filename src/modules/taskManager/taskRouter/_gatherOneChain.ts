@@ -58,7 +58,7 @@ export const _gatherOneChain = (
     // destination chain에 bridge의 toToken이 존재하지 않는 경우 추가해준다.
     if (
       tokensByChainId[dstChainId].every(
-        (i) => i.address === bridgeCore.data.toToken.address
+        (i) => i.address !== bridgeCore.data.toToken.address
       )
     ) {
       const bridgeToToken = Token.get(

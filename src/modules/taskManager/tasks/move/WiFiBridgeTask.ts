@@ -80,7 +80,7 @@ export class WiFiBridgeTask extends TaskBase<WiFiBridgeTaskData> {
 
     const txHash = await bridgeApi
       .get<{ txHash: string }>(
-        `/fromChainId=${fromToken.chainId}&chainId=${toToken.chainId}&amount=${amountIn}&to=${to}`
+        `?fromChainId=${fromToken.chainId}&chainId=${toToken.chainId}&amount=${amountIn}&to=${to}`
       )
       .then((res) => {
         console.log(res.data);

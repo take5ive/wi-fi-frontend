@@ -92,6 +92,15 @@ export const investTasks = (
         tasks.push(...gatherTasks);
       }
       // decompose notDstTokens[0]
+      if (!notDstTokens[0].isNativeToken()) {
+        tasks.push(
+          new ApproveTask(
+            notDstTokens[0],
+            chain.funnelAddress,
+            `${chain.name} Funnel`
+          )
+        );
+      }
       tasks.push(new UniswapV2DecomposeTask(notDstTokens[0].address, pair, to));
 
     }

@@ -1,4 +1,3 @@
-import { formatOrfloorTiny } from "utils";
 import { PairSelectionProps } from "./PairSelection";
 import { Token } from "modules/Token";
 import { AiOutlineLoading3Quarters } from "react-icons/ai";

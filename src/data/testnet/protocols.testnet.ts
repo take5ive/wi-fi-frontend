@@ -1,5 +1,4 @@
 import { ProtocolData } from "interfaces/config-data.interface";
-import { ethers } from "ethers";
 import TESTNET_CHAINID from "./chainIds.testnet";
 
 const UniswapV2Protocols: ProtocolData<"UniswapV2">[] = [
@@ -50,46 +49,46 @@ const UniswapV2Protocols: ProtocolData<"UniswapV2">[] = [
 ];
 
 const ConnextBridgeProtocols: ProtocolData<"ConnextBridge">[] = [
-  {
-    usage: "bridge",
-    type: "ConnextBridge",
-    name: "Connext Bridge",
-    chainId: TESTNET_CHAINID.Ethereum,
-    data: {
-      coreAddress: "0xFCa08024A6D4bCc87275b1E4A1E22B71fAD7f649",
-      dstChainIdentifier: 9991,
-      relayerGasFee: ethers.utils.parseEther("0.3").toString(),
-      feeBps: 5,
-      fromToken: {
-        chainId: TESTNET_CHAINID.Ethereum,
-        address: "0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1",
-      },
-      toToken: {
-        chainId: TESTNET_CHAINID.Polygon,
-        address: "0xeDb95D8037f769B72AAab41deeC92903A98C9E16",
-      },
-    },
-  },
-  {
-    usage: "bridge",
-    type: "ConnextBridge",
-    name: "Connext Bridge",
-    chainId: TESTNET_CHAINID.Polygon,
-    data: {
-      coreAddress: "0x2334937846Ab2A3FCE747b32587e1A1A2f6EEC5a",
-      dstChainIdentifier: 1735353714,
-      relayerGasFee: ethers.utils.parseEther("40").toString(),
-      feeBps: 5,
-      fromToken: {
-        chainId: TESTNET_CHAINID.Polygon,
-        address: "0xeDb95D8037f769B72AAab41deeC92903A98C9E16",
-      },
-      toToken: {
-        chainId: TESTNET_CHAINID.Ethereum,
-        address: "0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1",
-      },
-    },
-  },
+  // {
+  //   usage: "bridge",
+  //   type: "ConnextBridge",
+  //   name: "Connext Bridge",
+  //   chainId: TESTNET_CHAINID.Ethereum,
+  //   data: {
+  //     coreAddress: "0xFCa08024A6D4bCc87275b1E4A1E22B71fAD7f649",
+  //     dstChainIdentifier: 9991,
+  //     relayerGasFee: ethers.utils.parseEther("0.3").toString(),
+  //     feeBps: 5,
+  //     fromToken: {
+  //       chainId: TESTNET_CHAINID.Ethereum,
+  //       address: "0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1",
+  //     },
+  //     toToken: {
+  //       chainId: TESTNET_CHAINID.Polygon,
+  //       address: "0xeDb95D8037f769B72AAab41deeC92903A98C9E16",
+  //     },
+  //   },
+  // },
+  // {
+  //   usage: "bridge",
+  //   type: "ConnextBridge",
+  //   name: "Connext Bridge",
+  //   chainId: TESTNET_CHAINID.Polygon,
+  //   data: {
+  //     coreAddress: "0x2334937846Ab2A3FCE747b32587e1A1A2f6EEC5a",
+  //     dstChainIdentifier: 1735353714,
+  //     relayerGasFee: ethers.utils.parseEther("40").toString(),
+  //     feeBps: 5,
+  //     fromToken: {
+  //       chainId: TESTNET_CHAINID.Polygon,
+  //       address: "0xeDb95D8037f769B72AAab41deeC92903A98C9E16",
+  //     },
+  //     toToken: {
+  //       chainId: TESTNET_CHAINID.Ethereum,
+  //       address: "0x7ea6eA49B0b0Ae9c5db7907d139D9Cd3439862a1",
+  //     },
+  //   },
+  // },
 ];
 
 const WiFiBridgeProtocols: ProtocolData<"WiFiBridge">[] = [];
