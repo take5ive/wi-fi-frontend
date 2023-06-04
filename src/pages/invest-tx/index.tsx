@@ -17,7 +17,8 @@ function InvestTx() {
   return invest && inputTokenAmounts.length > 0 ? (
     <Layout>
       <p className="text-5xl font-bold">
-        Invest {inputTokenAmounts.length} Assets to {invest.protocol}
+        Invest {inputTokenAmounts.length} Assets to{" "}
+        {invest.chainId === 10200 ? "Honeyswap" : invest.protocol}
       </p>
       <div className="mt-6 grid grid-cols-[1fr_2fr] gap-12">
         <CurrentTransaction
