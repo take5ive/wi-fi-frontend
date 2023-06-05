@@ -5,6 +5,7 @@ import { Gather } from "pages/gather";
 import { Invest } from "pages/invest";
 import GatherTx from "pages/gather-tx";
 import InvestTx from "pages/invest-tx";
+import Withdraw from "pages/withdraw";
 
 export default function Router() {
   return (
@@ -15,6 +16,7 @@ export default function Router() {
         <Route path={ROUTES.GATHER_TX} element={<GatherTx />} />
         <Route path={ROUTES.INVEST} element={<Invest />} />
         <Route path={ROUTES.INVEST_TX} element={<InvestTx />} />
+        <Route path={ROUTES.WITHDRAW} element={<Withdraw />} />
       </Routes>
     </BrowserRouter>
   );
